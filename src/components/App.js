@@ -1,13 +1,22 @@
+import React, { useState } from 'react';
+import Child from './Child.js';
+import '../styles/App.css'; // You can define your CSS styles here
 
-import React from "react";
-import './../styles/App.css';
+function App() {
+  const [childInput, setChildInput] = useState('');
 
-const App = () => {
+  const handleChildInputChange = (value) => {
+    setChildInput(value);
+  };
+
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="App">
+      <h1>Parent Component</h1>
+      <p>{childInput}</p>
+      <Child onInputChange={handleChildInputChange} />
+     
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
