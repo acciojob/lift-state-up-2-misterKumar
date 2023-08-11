@@ -10,7 +10,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="parent">
       <h1>Parent Component</h1>
       <p>{childInput}</p>
       <Child onInputChange={handleChildInputChange} />
